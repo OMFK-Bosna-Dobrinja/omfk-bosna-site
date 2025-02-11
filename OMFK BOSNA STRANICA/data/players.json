@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Emir Tuzlak",
+        "position": "Napad",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Hamza Bota",
+        "position": "Odbrana",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Borjan Vojinović",
+        "position": "Napad/Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Ajdin Kovač",
+        "position": "Napad",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Muhammed Glamočić",
+        "position": "Napad/Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Edi Lukić",
+        "position": "Sredina/Odbrana",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Faris Bulić",
+        "position": "Napad/Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Mirsad Koshi",
+        "position": "Golman",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Din Đihan",
+        "position": "Odbrana",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Arnel Šumar",
+        "position": "Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Mersad Catović",
+        "position": "Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": " Ermin Gibanica",
+        "position": "Sredina/Odbrana",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Amar Žigo",
+        "position": "Napad/Sredina",
+        "image": "images/generic.jpg"
+    },
+    {
+        "name": "Tarik Bubalo",
+        "position": "Napad/Sredina",
+        "image": "images/generic.jpg"
+    },
+]

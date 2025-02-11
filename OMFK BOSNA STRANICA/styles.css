@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #002855;
+}
+
+header {
+    background: #00509e;
+    color: #ffc72c;
+    padding: 2em 0;
+    text-align: center;
+    border-bottom: 5px solid #ffc72c;
+    text-shadow: 1px 1px 4px #002855;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 40, 85, 0.9);
+    padding: 0.5em 0;
+}
+
+nav a {
+    color: #ffc72c;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('OMFK BOSNA DOBRINJA.jpg') no-repeat center center;
+    background-size: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: lighten;
+    color: #002855;
+    text-align: center;
+    padding: 5em 2em;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #00509e;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #00509e;
+}
+
+.hero a {
+    display: inline-block;
+    background: #ffc72c;
+    color: #002855;
+    padding: 0.8em 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background: #ffb400;
+}
+
+main {
+    padding: 2em;
+}
+
+.section {
+    margin-bottom: 2em;
+}
+
+.section h2 {
+    color: #00509e;
+    border-bottom: 2px solid #ffc72c;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.team .player {
+    text-align: center;
+}
+
+.team .player img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.team .player h3 {
+    margin-top: 0.5em;
+    color: #00509e;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.news article {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+.news article h3 {
+    color: #00509e;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.photos img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background: rgba(0, 40, 85, 0.9);
+    color: #ffc72c;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #ffc72c;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00509e;
+    color: #ffc72c;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background: #002855;
+}

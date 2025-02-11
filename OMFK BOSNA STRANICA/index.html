@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMFK Bosna Dobrinja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>OMFK Bosna Dobrinja</h1>
+        <nav>
+            <a href="index.html">Početna</a>
+            <a href="about.html">O nama</a>
+            <a href="#team">Naš tim</a>
+            <a href="#news">Novosti</a>
+            <a href="#photos">Fotografije</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Strast, zajedništvo i ljubav prema fudbalu!</h2>
+        <p>Dobrodošli na zvaničnu stranicu OMFK Bosna Dobrinja.</p>
+        <a href="about.html">Saznajte više</a>
+    </div>
+
+    <main>
+        <section id="about" class="section">
+            <h2>O nama</h2>
+            <p>Dobrodošli na zvaničnu web stranicu našeg fudbalskog kluba! Naš klub, OMFK Bosna Dobrinja, osnovan je s ciljem da okupi ljubitelje fudbala iz naše zajednice i pruži im priliku da uživaju u ovom predivnom sportu. Od osnivanja [godina osnivanja], naš klub nije samo mjesto za igru, već i za prijateljstvo, zajedništvo i sportski duh.</p>
+        </section>
+
+        <section id="team" class="section">
+            <h2>Naš tim</h2>
+            <div class="team" id="team-container">
+                <!-- Players will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>Novosti</h2>
+            <div class="news">
+                <article>
+                    <h3>OMFK Bosna Dobrinja osvaja turnir!</h3>
+                    <p>20. januar 2025 - Naš tim je ostvario sjajan rezultat na turniru u Sarajevu.</p>
+                </article>
+                <article>
+                    <h3>Novi igrač se pridružio timu</h3>
+                    <p>15. januar 2025 - Hamza Bota se pridružio timu kao odbrambeni igrač.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="photos" class="section">
+            <h2>Fotografije</h2>
+            <div class="photos">
+                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 OMFK Bosna Dobrinja. Sva prava zadržana.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-x"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top">&uarr;</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const photos = document.querySelectorAll(".photos img");
+
+            const revealPhotos = () => {
+                const triggerBottom = window.innerHeight * 0.8;
+
+                photos.forEach(photo => {
+                    const photoTop = photo.getBoundingClientRect().top;
+
+                    if (photoTop < triggerBottom) {
+                        photo.classList.add("show");
+                    } else {
+                        photo.classList.remove("show");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", revealPhotos);
+            revealPhotos(); // Initial check in case photos are already in view
+
+            // Load team members dynamically
+            const teamContainer = document.getElementById("team-container");
+
+            fetch("players.json")
+                .then(response => response.json())
+                .then(players => {
+                    players.forEach(player => {
+                        const playerCard = document.createElement("div");
+                        playerCard.classList.add("player");
+
+                        playerCard.innerHTML = `
+                            <img src="${player.image}" alt="${player.name}">
+                            <h3>${player.name}</h3>
+                            <p>Pozicija: ${player.position}</p>
+                        `;
+
+                        teamContainer.appendChild(playerCard);
+                    });
+                })
+                .catch(error => console.error("Error loading players:", error));
+        });
+    </script>
+</body>
+</html>
